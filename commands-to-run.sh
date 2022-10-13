@@ -44,7 +44,7 @@ touch results/networks/2012/3M/elec_s_3M_ec_lcopt_Co2L-3H.nc
 snakemake --touch --forceall <file>
 
 # Remove created files
-
+snakemake <some_target> --delete-all-output
 
 
 #########################################
