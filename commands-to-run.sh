@@ -10,17 +10,20 @@ mamba env create --file environment.yaml
 
 conda activate ai4er_code-review_snakemake
 ############################################
+####### Things to run during the meeting ###
 
 
 
-
-# See rule with existing inputs
-snakemake results/ml/2012/3M/elec_s_37_ec_lcopt_Co2L-3H_inputs.P -n   
-# Actually run a rule
-snakemake results/ml/2012/3M/elec_s_37_ec_lcopt_Co2L-3H_inputs.P -j all
+# See effects of rule with existing inputs 
+# (see troubleshooting below if more than one command)
+snakemake results/ml/2012/3M/elec_s_37_ec_lcopt_Co2L-3H_inputs.P -n
 
 
-# A full set of rules foor a different wildcard
+# Actually run the rule
+snakemake results/ml/2012/3M/elec_s_37_ec_lcopt_Co2L-3H_inputs.P --cores 2
+
+
+# A full set of rules for a different wildcard
 snakemake results/networks/2012/3M/elec_s_64m_ec_lcopt_Co2L-3H.nc -n  
 
 
@@ -33,7 +36,7 @@ snakemake results/networks/2012/3M/elec_s_64m_ec_lcopt_Co2L-3H.nc -n --dag | hea
 snakemake results/networks/2012/3M/elec_s_64m_ec_lcopt_Co2L-3H.nc -n --dag | tail -n +4 | dot -Tsvg > graph.svg
 
 
-############## Troubleshooting ###########
+############## Troubleshooting ##############
 
 # Messed up timestamps require a manual update:
 touch results/networks/2012/3M/elec_s_3M_ec_lcopt_Co2L-3H.nc

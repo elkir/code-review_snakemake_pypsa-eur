@@ -2,6 +2,13 @@ A sample code for the 2022-10-17 AI4ER Code review
 
 
 ## Files to look at
+file [lines to focus on]
+`Snakefile [359-369]` - rule for running scripts
+`config.yaml [1-20,278-281]` - parameters for the scripts
+`scripts/extract_ml_data.py [102-112]`- code to produce results
+
+
+`commands-to-run` - commands we will run in the session
 
 ## Setup
 ``` shell
