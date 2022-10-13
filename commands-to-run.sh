@@ -33,6 +33,16 @@ snakemake results/networks/2012/3M/elec_s_64m_ec_lcopt_Co2L-3H.nc -n --dag | hea
 snakemake results/networks/2012/3M/elec_s_64m_ec_lcopt_Co2L-3H.nc -n --dag | tail -n +4 | dot -Tsvg > graph.svg
 
 
+############## Troubleshooting ###########
+
+# Messed up timestamps require a manual update:
+touch results/networks/2012/3M/elec_s_3M_ec_lcopt_Co2L-3H.nc
+# or automatic
+snakemake --touch --forceall <file>
+
+# Remove created files
+
+
 
 #########################################
 ## Cleanup 
