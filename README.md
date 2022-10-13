@@ -13,7 +13,7 @@ File [lines to focus on]:
 
 ## If curious
 `Snakefile` - other rules  
-`scripts/solve_network.py [435-452]` - more complicated rule
+`scripts/solve_network.py [435-452]` - code for more complicated rule
 
 # Setup
 ``` shell
